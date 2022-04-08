@@ -1,12 +1,10 @@
-const express = require('express');
-
+import express from 'express';
 const app = express();
-
 app.use(express.json());
 
 const edit = require('./routes/edit');
 const get = require('./routes/get');
-const post = require('./routes/post');
+import create from './src/routes/create/index.js';
 const remove = require('./routes/remove');
 
 app.post('/post', post);
