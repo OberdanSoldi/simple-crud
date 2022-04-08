@@ -3,7 +3,7 @@ const app = express();
 app.use(express.json());
 
 const edit = require('./routes/edit');
-const get = require('./routes/get');
+import read from './src/routes/read/index.js';
 import create from './src/routes/create/index.js';
 const remove = require('./routes/remove');
 
