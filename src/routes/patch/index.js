@@ -1,8 +1,12 @@
-const query = require('../../db');
+import express from 'express';
+import query from '../../db';
 
-module.exports = async (req, res) => {
+const router = express.Router();
+
+router.patch('/:id', async (req, res) => {
 	try {
-		const { id, name, lastname, ddd, phone } = req.body;
+		const { id } = req.params;
+		const { name, lastname, ddd, phone } = req.body;
 
 		const sql = `UPDATE crud SET name = '${name}', lastname = '${lastname}', ddd = '${ddd}', phone = '${phone}' WHERE id = ${id}`;
 		const results = await query(sql);
@@ -25,4 +29,6 @@ module.exports = async (req, res) => {
 		});
 		console.error(e);
 	}
-};
+})
+
+export default router;

@@ -2,7 +2,7 @@ import express from 'express';
 const app = express();
 app.use(express.json());
 
-const edit = require('./routes/edit');
+import patch from './src/routes/patch/index.js';
 import read from './src/routes/read/index.js';
 import create from './src/routes/create/index.js';
 import removeRoute from './src/routes/delete/index.js';
