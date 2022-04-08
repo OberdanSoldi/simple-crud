@@ -1,7 +1,5 @@
 import mysql from 'serverless-mysql';
 
-require('dotenv').config();
-
 const conn = mysql({
 	config: {
 		host: process.env.DB_HOST,
