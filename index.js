@@ -12,5 +12,5 @@ app.use('/read', read);
 app.use('/create', create);
 app.use('/remove', removeRoute);
 
-port = 4000;
+const port = 4000;
 app.listen(port, () => console.log(`Listening on port ${port}`));
