@@ -17,23 +17,23 @@
 ### Get:
 
 ```http request
-GET http://localhost:4000/get
+GET http://localhost:4000/read
 ```
 
 ### Post:
 
 ```http request
-POST http://localhost:4000/post
+POST http://localhost:4000/create
 ```
 
 ### Update:
 
 ```http request
-POST http://localhost:4000/update
+PATCH http://localhost:4000/patch
 ```
 
 ### Delete:
 
 ```http request
-DELETE http://localhost:4000/delete
+DELETE http://localhost:4000/remove/(id)
 ```
