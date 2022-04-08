@@ -1,8 +1,11 @@
-const query = require('../../db');
+import express from 'express';
+import query from '../../db';
 
-module.exports = async (req, res) => {
+const router = express.Router();
+
+router.delete('/:id', async (req, res) => {
 	try {
-		const { id } = req.body;
+		const { id } = req.params;
 
 		const sql = `DELETE FROM crud WHERE id = ${id}`;
 		const results = await query(sql);
@@ -25,4 +28,6 @@ module.exports = async (req, res) => {
 		});
 		console.error(e);
 	}
-};
+});
+
+export default router;

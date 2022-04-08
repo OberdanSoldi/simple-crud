@@ -5,7 +5,7 @@ app.use(express.json());
 const edit = require('./routes/edit');
 import read from './src/routes/read/index.js';
 import create from './src/routes/create/index.js';
-const remove = require('./routes/remove');
+import removeRoute from './src/routes/delete/index.js';
 
 app.post('/post', post);
 app.get('/get', get);
