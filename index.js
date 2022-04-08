@@ -7,10 +7,10 @@ import read from './src/routes/read/index.js';
 import create from './src/routes/create/index.js';
 import removeRoute from './src/routes/delete/index.js';
 
-app.post('/post', post);
-app.get('/get', get);
-app.post('/update', edit);
-app.delete('/delete', remove);
+app.use('/patch', patch);
+app.use('/read', read);
+app.use('/create', create);
+app.use('/remove', removeRoute);
 
 port = 4000;
 app.listen(port, () => console.log(`Listening on port ${port}`));
