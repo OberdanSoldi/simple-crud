@@ -21,13 +21,13 @@
 ### Get:
 
 ```http request
-GET http://localhost:4000/read
+GET http://localhost:4000/
 ```
 
 ### Post:
 
 ```http request
-POST http://localhost:4000/create
+POST http://localhost:4000/
 ```
 
 ### Update:
