@@ -2,11 +2,11 @@ import mysql from 'serverless-mysql';
 
 const conn = mysql({
 	config: {
-		host: process.env.DB_HOST,
-		user: process.env.DB_USER,
-		port: process.env.DB_PORT,
-		password: process.env.DB_PASS,
-		database: process.env.DB_DB,
+		host: 'localhost',
+		user: 'root',
+		port: 3306,
+		password: '',
+		database: 'crud',
 		charset: 'utf8mb4_unicode_ci'
 	}
 });
